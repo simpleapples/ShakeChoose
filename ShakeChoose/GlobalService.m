@@ -61,7 +61,7 @@
 
 - (NSInteger)foodListCount
 {
-    return [_foodList count];
+    return _foodList.count;
 }
 
 - (void)backupToFile
@@ -100,7 +100,6 @@
 - (UIColor *)getRandomColor
 {
     NSInteger index = arc4random() % [_colorList count];
-    NSLog(@"===%d", index);
     _currentColor = [_colorList objectAtIndex:index];
     return _currentColor;
 }

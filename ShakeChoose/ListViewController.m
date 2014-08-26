@@ -32,8 +32,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [[self view] setBackgroundColor:[[GlobalService sharedSingleton] currentColor]];
-    [[self navigationBar] setBarTintColor:[[GlobalService sharedSingleton] currentColor]];
+    self.view.backgroundColor = [GlobalService sharedSingleton].currentColor;
+    self.navigationBar.barTintColor = [GlobalService sharedSingleton].currentColor;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +48,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[GlobalService sharedSingleton] foodListCount];
+    return [GlobalService sharedSingleton].foodListCount;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,7 +60,7 @@
 {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"food"];
     Food *food = [[GlobalService sharedSingleton] foodAtIndex:indexPath.row];
-    [[cell textLabel] setText:[food name]];
+    cell.textLabel.text = food.name;
     return cell;
 }
 
@@ -82,7 +82,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [[GlobalService sharedSingleton] deleteFoodAtIndex:indexPath.row];
-    [[self tableView] reloadData];
+    [self.tableView reloadData];
 }
 
 - (IBAction)onClickDone:(id)sender
@@ -93,7 +93,7 @@
 - (IBAction)onClickAdd:(id)sender
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"添加" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"完成", nil];
-    [alertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alertView show];
 }
 
@@ -102,7 +102,7 @@
     if (buttonIndex == 1) {
         Food *food = [[Food alloc] initWithName:[[alertView textFieldAtIndex:0] text]];
         [[GlobalService sharedSingleton] insertFood:food];
-        [[self tableView] reloadData];
+        [self.tableView reloadData];
     }
 }
 
