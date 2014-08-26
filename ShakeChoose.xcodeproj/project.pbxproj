@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A2CECF819AB428E00BB1D1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2CECF719AB428E00BB1D1B /* Foundation.framework */; };
+		5A2CECFA19AB428E00BB1D1B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2CECF919AB428E00BB1D1B /* CoreGraphics.framework */; };
+		5A2CECFC19AB428E00BB1D1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2CECFB19AB428E00BB1D1B /* UIKit.framework */; };
+		5A2CED0219AB428E00BB1D1B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A2CED0019AB428E00BB1D1B /* InfoPlist.strings */; };
+		5A2CED0419AB428E00BB1D1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CED0319AB428E00BB1D1B /* main.m */; };
+		5A2CED0819AB428E00BB1D1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CED0719AB428E00BB1D1B /* AppDelegate.m */; };
+		5A2CED0A19AB428E00BB1D1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2CED0919AB428E00BB1D1B /* Images.xcassets */; };
+		5A2CED1119AB428E00BB1D1B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2CED1019AB428E00BB1D1B /* XCTest.framework */; };
+		5A2CED1219AB428E00BB1D1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2CECF719AB428E00BB1D1B /* Foundation.framework */; };
+		5A2CED1319AB428E00BB1D1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2CECFB19AB428E00BB1D1B /* UIKit.framework */; };
+		5A2CED1B19AB428E00BB1D1B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A2CED1919AB428E00BB1D1B /* InfoPlist.strings */; };
+		5A2CED1D19AB428E00BB1D1B /* ShakeChooseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CED1C19AB428E00BB1D1B /* ShakeChooseTests.m */; };
+		5A2CED2F19AB452C00BB1D1B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CED2D19AB452C00BB1D1B /* MainViewController.m */; };
+		5A2CED3019AB452C00BB1D1B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2CED2E19AB452C00BB1D1B /* MainViewController.xib */; };
+		5A2CED3419AB486D00BB1D1B /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CED3319AB486D00BB1D1B /* Food.m */; };
+		5A2CED3819AB488D00BB1D1B /* GlobalService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CED3719AB488D00BB1D1B /* GlobalService.m */; };
+		5AEC8C4E19AC2286008B1B75 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC8C4C19AC2286008B1B75 /* ListViewController.m */; };
+		5AEC8C4F19AC2286008B1B75 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AEC8C4D19AC2286008B1B75 /* ListViewController.xib */; };
+		5AEC8C9719AC2E5E008B1B75 /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC8C9619AC2E5E008B1B75 /* FileUtils.m */; };
+		5AEC8C9919AC3510008B1B75 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEC8C9819AC3510008B1B75 /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A2CED1419AB428E00BB1D1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A2CECEC19AB428E00BB1D1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A2CECF319AB428E00BB1D1B;
+			remoteInfo = ShakeChoose;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A2CECF419AB428E00BB1D1B /* ShakeChoose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShakeChoose.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A2CECF719AB428E00BB1D1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5A2CECF919AB428E00BB1D1B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5A2CECFB19AB428E00BB1D1B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5A2CECFF19AB428E00BB1D1B /* ShakeChoose-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShakeChoose-Info.plist"; sourceTree = "<group>"; };
+		5A2CED0119AB428E00BB1D1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A2CED0319AB428E00BB1D1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A2CED0519AB428E00BB1D1B /* ShakeChoose-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShakeChoose-Prefix.pch"; sourceTree = "<group>"; };
+		5A2CED0619AB428E00BB1D1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5A2CED0719AB428E00BB1D1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5A2CED0919AB428E00BB1D1B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5A2CED0F19AB428E00BB1D1B /* ShakeChooseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakeChooseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A2CED1019AB428E00BB1D1B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5A2CED1819AB428E00BB1D1B /* ShakeChooseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShakeChooseTests-Info.plist"; sourceTree = "<group>"; };
+		5A2CED1A19AB428E00BB1D1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A2CED1C19AB428E00BB1D1B /* ShakeChooseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeChooseTests.m; sourceTree = "<group>"; };
+		5A2CED2C19AB452C00BB1D1B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5A2CED2D19AB452C00BB1D1B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5A2CED2E19AB452C00BB1D1B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		5A2CED3219AB486D00BB1D1B /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		5A2CED3319AB486D00BB1D1B /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
+		5A2CED3619AB488D00BB1D1B /* GlobalService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalService.h; sourceTree = "<group>"; };
+		5A2CED3719AB488D00BB1D1B /* GlobalService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalService.m; sourceTree = "<group>"; };
+		5AEC8C4B19AC2286008B1B75 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		5AEC8C4C19AC2286008B1B75 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		5AEC8C4D19AC2286008B1B75 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		5AEC8C9519AC2E5E008B1B75 /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
+		5AEC8C9619AC2E5E008B1B75 /* FileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtils.m; sourceTree = "<group>"; };
+		5AEC8C9819AC3510008B1B75 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A2CECF119AB428E00BB1D1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEC8C9919AC3510008B1B75 /* AudioToolbox.framework in Frameworks */,
+				5A2CECFA19AB428E00BB1D1B /* CoreGraphics.framework in Frameworks */,
+				5A2CECFC19AB428E00BB1D1B /* UIKit.framework in Frameworks */,
+				5A2CECF819AB428E00BB1D1B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A2CED0C19AB428E00BB1D1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A2CED1119AB428E00BB1D1B /* XCTest.framework in Frameworks */,
+				5A2CED1319AB428E00BB1D1B /* UIKit.framework in Frameworks */,
+				5A2CED1219AB428E00BB1D1B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A2CECEB19AB428E00BB1D1B = {
+			isa = PBXGroup;
+			children = (
+				5A2CECFD19AB428E00BB1D1B /* ShakeChoose */,
+				5A2CED1619AB428E00BB1D1B /* ShakeChooseTests */,
+				5A2CECF619AB428E00BB1D1B /* Frameworks */,
+				5A2CECF519AB428E00BB1D1B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A2CECF519AB428E00BB1D1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A2CECF419AB428E00BB1D1B /* ShakeChoose.app */,
+				5A2CED0F19AB428E00BB1D1B /* ShakeChooseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A2CECF619AB428E00BB1D1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AEC8C9819AC3510008B1B75 /* AudioToolbox.framework */,
+				5A2CECF719AB428E00BB1D1B /* Foundation.framework */,
+				5A2CECF919AB428E00BB1D1B /* CoreGraphics.framework */,
+				5A2CECFB19AB428E00BB1D1B /* UIKit.framework */,
+				5A2CED1019AB428E00BB1D1B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A2CECFD19AB428E00BB1D1B /* ShakeChoose */ = {
+			isa = PBXGroup;
+			children = (
+				5AEC8C9419AC2E48008B1B75 /* Utils */,
+				5A2CED3519AB487A00BB1D1B /* Service */,
+				5A2CED3119AB484F00BB1D1B /* Model */,
+				5A2CED2B19AB42DC00BB1D1B /* Controller */,
+				5A2CED0619AB428E00BB1D1B /* AppDelegate.h */,
+				5A2CED0719AB428E00BB1D1B /* AppDelegate.m */,
+				5A2CED0919AB428E00BB1D1B /* Images.xcassets */,
+				5A2CECFE19AB428E00BB1D1B /* Supporting Files */,
+			);
+			path = ShakeChoose;
+			sourceTree = "<group>";
+		};
+		5A2CECFE19AB428E00BB1D1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A2CECFF19AB428E00BB1D1B /* ShakeChoose-Info.plist */,
+				5A2CED0019AB428E00BB1D1B /* InfoPlist.strings */,
+				5A2CED0319AB428E00BB1D1B /* main.m */,
+				5A2CED0519AB428E00BB1D1B /* ShakeChoose-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A2CED1619AB428E00BB1D1B /* ShakeChooseTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A2CED1C19AB428E00BB1D1B /* ShakeChooseTests.m */,
+				5A2CED1719AB428E00BB1D1B /* Supporting Files */,
+			);
+			path = ShakeChooseTests;
+			sourceTree = "<group>";
+		};
+		5A2CED1719AB428E00BB1D1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A2CED1819AB428E00BB1D1B /* ShakeChooseTests-Info.plist */,
+				5A2CED1919AB428E00BB1D1B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A2CED2B19AB42DC00BB1D1B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A2CED2C19AB452C00BB1D1B /* MainViewController.h */,
+				5A2CED2D19AB452C00BB1D1B /* MainViewController.m */,
+				5A2CED2E19AB452C00BB1D1B /* MainViewController.xib */,
+				5AEC8C4B19AC2286008B1B75 /* ListViewController.h */,
+				5AEC8C4C19AC2286008B1B75 /* ListViewController.m */,
+				5AEC8C4D19AC2286008B1B75 /* ListViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5A2CED3119AB484F00BB1D1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A2CED3219AB486D00BB1D1B /* Food.h */,
+				5A2CED3319AB486D00BB1D1B /* Food.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5A2CED3519AB487A00BB1D1B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5A2CED3619AB488D00BB1D1B /* GlobalService.h */,
+				5A2CED3719AB488D00BB1D1B /* GlobalService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		5AEC8C9419AC2E48008B1B75 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5AEC8C9519AC2E5E008B1B75 /* FileUtils.h */,
+				5AEC8C9619AC2E5E008B1B75 /* FileUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A2CECF319AB428E00BB1D1B /* ShakeChoose */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A2CED2019AB428E00BB1D1B /* Build configuration list for PBXNativeTarget "ShakeChoose" */;
+			buildPhases = (
+				5A2CECF019AB428E00BB1D1B /* Sources */,
+				5A2CECF119AB428E00BB1D1B /* Frameworks */,
+				5A2CECF219AB428E00BB1D1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShakeChoose;
+			productName = ShakeChoose;
+			productReference = 5A2CECF419AB428E00BB1D1B /* ShakeChoose.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A2CED0E19AB428E00BB1D1B /* ShakeChooseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A2CED2319AB428E00BB1D1B /* Build configuration list for PBXNativeTarget "ShakeChooseTests" */;
+			buildPhases = (
+				5A2CED0B19AB428E00BB1D1B /* Sources */,
+				5A2CED0C19AB428E00BB1D1B /* Frameworks */,
+				5A2CED0D19AB428E00BB1D1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A2CED1519AB428E00BB1D1B /* PBXTargetDependency */,
+			);
+			name = ShakeChooseTests;
+			productName = ShakeChooseTests;
+			productReference = 5A2CED0F19AB428E00BB1D1B /* ShakeChooseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A2CECEC19AB428E00BB1D1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Duobei Brothers";
+				TargetAttributes = {
+					5A2CED0E19AB428E00BB1D1B = {
+						TestTargetID = 5A2CECF319AB428E00BB1D1B;
+					};
+				};
+			};
+			buildConfigurationList = 5A2CECEF19AB428E00BB1D1B /* Build configuration list for PBXProject "ShakeChoose" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5A2CECEB19AB428E00BB1D1B;
+			productRefGroup = 5A2CECF519AB428E00BB1D1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A2CECF319AB428E00BB1D1B /* ShakeChoose */,
+				5A2CED0E19AB428E00BB1D1B /* ShakeChooseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A2CECF219AB428E00BB1D1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A2CED0219AB428E00BB1D1B /* InfoPlist.strings in Resources */,
+				5A2CED3019AB452C00BB1D1B /* MainViewController.xib in Resources */,
+				5AEC8C4F19AC2286008B1B75 /* ListViewController.xib in Resources */,
+				5A2CED0A19AB428E00BB1D1B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A2CED0D19AB428E00BB1D1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A2CED1B19AB428E00BB1D1B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A2CECF019AB428E00BB1D1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A2CED0819AB428E00BB1D1B /* AppDelegate.m in Sources */,
+				5A2CED3419AB486D00BB1D1B /* Food.m in Sources */,
+				5AEC8C9719AC2E5E008B1B75 /* FileUtils.m in Sources */,
+				5AEC8C4E19AC2286008B1B75 /* ListViewController.m in Sources */,
+				5A2CED2F19AB452C00BB1D1B /* MainViewController.m in Sources */,
+				5A2CED3819AB488D00BB1D1B /* GlobalService.m in Sources */,
+				5A2CED0419AB428E00BB1D1B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A2CED0B19AB428E00BB1D1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A2CED1D19AB428E00BB1D1B /* ShakeChooseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A2CED1519AB428E00BB1D1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A2CECF319AB428E00BB1D1B /* ShakeChoose */;
+			targetProxy = 5A2CED1419AB428E00BB1D1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A2CED0019AB428E00BB1D1B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A2CED0119AB428E00BB1D1B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5A2CED1919AB428E00BB1D1B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A2CED1A19AB428E00BB1D1B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A2CED1E19AB428E00BB1D1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5A2CED1F19AB428E00BB1D1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A2CED2119AB428E00BB1D1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShakeChoose/ShakeChoose-Prefix.pch";
+				INFOPLIST_FILE = "ShakeChoose/ShakeChoose-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5A2CED2219AB428E00BB1D1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShakeChoose/ShakeChoose-Prefix.pch";
+				INFOPLIST_FILE = "ShakeChoose/ShakeChoose-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5A2CED2419AB428E00BB1D1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ShakeChoose.app/ShakeChoose";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShakeChoose/ShakeChoose-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ShakeChooseTests/ShakeChooseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5A2CED2519AB428E00BB1D1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ShakeChoose.app/ShakeChoose";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShakeChoose/ShakeChoose-Prefix.pch";
+				INFOPLIST_FILE = "ShakeChooseTests/ShakeChooseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A2CECEF19AB428E00BB1D1B /* Build configuration list for PBXProject "ShakeChoose" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A2CED1E19AB428E00BB1D1B /* Debug */,
+				5A2CED1F19AB428E00BB1D1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A2CED2019AB428E00BB1D1B /* Build configuration list for PBXNativeTarget "ShakeChoose" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A2CED2119AB428E00BB1D1B /* Debug */,
+				5A2CED2219AB428E00BB1D1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A2CED2319AB428E00BB1D1B /* Build configuration list for PBXNativeTarget "ShakeChooseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A2CED2419AB428E00BB1D1B /* Debug */,
+				5A2CED2519AB428E00BB1D1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A2CECEC19AB428E00BB1D1B /* Project object */;
+}
