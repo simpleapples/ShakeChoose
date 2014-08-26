@@ -30,13 +30,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self updateViewWithInit:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self updateViewWithInit:YES];
+    [self becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
