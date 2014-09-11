@@ -94,6 +94,7 @@
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"添加" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"完成", nil];
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alertView textFieldAtIndex:0].placeholder = @"请输入外卖名称";
     [alertView show];
 }
 

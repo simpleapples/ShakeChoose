@@ -28,11 +28,11 @@
     self = [super init];
     if (self) {
         _colorList = [[NSArray alloc] initWithObjects:
-                      [UIColor colorWithRed:1.0f green:192 / 255.0f blue:0 alpha:1.0f],
-                      [UIColor colorWithRed:234 / 255.0f green:46 / 255.0f blue:73 / 255.0f alpha:1.0f],
-                      [UIColor colorWithRed:61 / 255.0f green:76 / 255.0f blue:83 / 255.0f alpha:1.0f],
-                      [UIColor colorWithRed:152 / 255.0f green:192 / 255.0f blue:0 alpha:1.0f],
-                      [UIColor colorWithRed:12 / 255.0f green:219 / 255.0f blue:232 / 255.0f alpha:1.0f],
+                      [UIColor colorWithRed:250 / 255.0f green:157 / 255.0f blue:28 / 255.0f alpha:1.0f],
+                      [UIColor colorWithRed:76 / 255.0f green:182 / 255.0f blue:178 / 255.0f alpha:1.0f],
+                      [UIColor colorWithRed:111 / 255.0f green:176 / 255.0f blue:127 / 255.0f alpha:1.0f],
+                      [UIColor colorWithRed:238 / 255.0f green:90 / 255.0f blue:57 / 255.0f alpha:1.0f],
+                      [UIColor colorWithRed:64 / 255.0f green:46 / 255.0f blue:35 / 255.0f alpha:1.0f],
                       nil];
         _foodList = [[NSMutableArray alloc] init];
     }
