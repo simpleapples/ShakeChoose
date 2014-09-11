@@ -8,7 +8,13 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "ListViewController.h"
+#import "HistoryViewController.h"
 #import "GlobalService.h"
+
+@interface AppDelegate ()
+@property (strong, nonatomic) UINavigationController *navigationController;
+@end
 
 @implementation AppDelegate
 
@@ -19,8 +25,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    _navigationController = [[UINavigationController alloc] init];
-    [_navigationController setNavigationBarHidden:YES];
+    self.navigationController = [[UINavigationController alloc] init];
+    [self.navigationController setNavigationBarHidden:YES];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
@@ -59,7 +65,7 @@
 - (void)enterMainViewControllerAnimated:(BOOL)animated
 {
     MainViewController *mainViewController = [[MainViewController alloc] init];
-    [_navigationController pushViewController:mainViewController animated:animated];
+    [self.navigationController pushViewController:mainViewController animated:animated];
 }
 
 @end

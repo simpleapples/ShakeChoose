@@ -9,21 +9,20 @@
 #import <Foundation/Foundation.h>
 
 @class Food;
+@class FoodHistory;
 
 @interface GlobalService : NSObject
-{
-    NSMutableArray *_foodList;
-    NSArray *_colorList;
-}
-
+@property (strong, readonly, nonatomic) NSArray *colorList;
+@property (strong, readonly, nonatomic) NSMutableArray *foodList;
+@property (strong, readonly, nonatomic) NSMutableArray *foodHistoryList;
 @property (strong, readonly, nonatomic) UIColor *currentColor;
 
 + (GlobalService *)sharedSingleton;
 
 - (void)insertFood:(Food *)food;
-- (Food *)foodAtIndex:(NSInteger)index;
 - (void)deleteFoodAtIndex:(NSInteger)index;
-- (NSInteger)foodListCount;
+
+- (void)inserFoodHistory:(FoodHistory *)foodHistory;
 
 - (void)backupToFile;
 - (void)recoverFromFile;

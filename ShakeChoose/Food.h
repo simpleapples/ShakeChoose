@@ -13,7 +13,5 @@
 @property (copy, readonly, nonatomic) NSString *name;
 
 - (instancetype)initWithName:(NSString *)name;
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-- (NSDictionary *)dictionaryValue;
 
 @end

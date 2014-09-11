@@ -10,6 +10,16 @@
 #import "Food.h"
 #import "FileUtils.h"
 
+static NSString *const FOOD_FILE = @"FoodFile";
+static NSString *const FOOD_HISTORY_FILE = @"FoodHistoryFile";
+
+@interface GlobalService ()
+@property (strong, nonatomic, readwrite) NSArray *colorList;
+@property (strong, nonatomic, readwrite) NSMutableArray *foodList;
+@property (strong, nonatomic, readwrite) NSMutableArray *foodHistoryList;
+@property (strong, nonatomic, readwrite) UIColor *currentColor;
+@end
+
 @implementation GlobalService
 
 + (GlobalService *)sharedSingleton
@@ -27,81 +37,74 @@
 {
     self = [super init];
     if (self) {
-        _colorList = [[NSArray alloc] initWithObjects:
+        self.colorList = [[NSArray alloc] initWithObjects:
                       [UIColor colorWithRed:250 / 255.0f green:157 / 255.0f blue:28 / 255.0f alpha:1.0f],
                       [UIColor colorWithRed:76 / 255.0f green:182 / 255.0f blue:178 / 255.0f alpha:1.0f],
                       [UIColor colorWithRed:111 / 255.0f green:176 / 255.0f blue:127 / 255.0f alpha:1.0f],
                       [UIColor colorWithRed:238 / 255.0f green:90 / 255.0f blue:57 / 255.0f alpha:1.0f],
                       [UIColor colorWithRed:64 / 255.0f green:46 / 255.0f blue:35 / 255.0f alpha:1.0f],
                       nil];
-        _foodList = [[NSMutableArray alloc] init];
+        self.foodList = [[NSMutableArray alloc] init];
+        self.foodHistoryList = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 - (void)insertFood:(Food *)food
 {
-    [_foodList addObject:food];
+    [self.foodList addObject:food];
     [self backupToFile];
-}
-
-- (Food *)foodAtIndex:(NSInteger)index
-{
-    if ([_foodList count]) {
-        return [_foodList objectAtIndex:index];
-    }
-    return nil;
 }
 
 - (void)deleteFoodAtIndex:(NSInteger)index
 {
-    [_foodList removeObjectAtIndex:index];
+    [self.foodList removeObjectAtIndex:index];
     [self backupToFile];
 }
 
-- (NSInteger)foodListCount
+- (void)inserFoodHistory:(FoodHistory *)foodHistory
 {
-    return _foodList.count;
+    [self.foodHistoryList addObject:foodHistory];
+    [self backupToFile];
 }
 
 - (void)backupToFile
 {
-    NSMutableArray *arr = [[NSMutableArray alloc] init];
-    [_foodList enumerateObjectsUsingBlock:^(Food *food, NSUInteger idx, BOOL *stop) {
-        [arr addObject:[food dictionaryValue]];
-    }];
-    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:arr, @"food", nil];
-    NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
-    NSString *jsonStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    [[FileUtils sharedSingleton] writeToFile:@"food_list" str:jsonStr];
+    [NSKeyedArchiver archiveRootObject:self.foodList toFile:[self documentPathWithFileName:FOOD_FILE]];
+    [NSKeyedArchiver archiveRootObject:self.foodHistoryList toFile:[self documentPathWithFileName:FOOD_HISTORY_FILE]];
 }
 
 - (void)recoverFromFile
 {
-    NSString *jsonStr = [[FileUtils sharedSingleton] readFromFile:@"food_list"];
-    NSData *data = [jsonStr dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    NSArray *result = [dict objectForKey:@"food"];
-    NSMutableArray *arr = [[NSMutableArray alloc] init];
-    [result enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL *stop) {
-        Food *food = [[Food alloc] initWithDictionary:dict];
-        [arr addObject:food];
-    }];
-    _foodList = nil;
-    _foodList = [arr mutableCopy];
+    NSArray *tempFoodArray = [NSKeyedUnarchiver unarchiveObjectWithFile:[self documentPathWithFileName:FOOD_FILE]];
+    if (tempFoodArray) {
+        self.foodList = [tempFoodArray mutableCopy];
+    }
+    NSArray *tempFoodHistoryArray = [NSKeyedUnarchiver unarchiveObjectWithFile:[self documentPathWithFileName:FOOD_HISTORY_FILE]];
+    if (tempFoodHistoryArray) {
+        self.foodHistoryList = [tempFoodHistoryArray mutableCopy];
+    }
 }
 
 - (Food *)getRandomFood
 {
-    NSInteger index = arc4random() % [_foodList count];
-    return [self foodAtIndex:index];
+    NSInteger index = arc4random() % self.foodList.count;
+    return [self.foodList objectAtIndex:index];
 }
 
 - (UIColor *)getRandomColor
 {
-    NSInteger index = arc4random() % [_colorList count];
-    _currentColor = [_colorList objectAtIndex:index];
-    return _currentColor;
+    NSInteger index = arc4random() % self.colorList.count;
+    self.currentColor = [self.colorList objectAtIndex:index];
+    return self.currentColor;
+}
+
+- (NSString *)documentPathWithFileName:(NSString *)fileName
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *basePath = [paths objectAtIndex:0];
+    NSString *filePath = [basePath stringByAppendingString:[NSString stringWithFormat:@"/%@", fileName]];
+    return filePath;
 }
 
 @end

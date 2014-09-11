@@ -8,6 +8,10 @@
 
 #import "Food.h"
 
+@interface Food ()<NSCoding>
+
+@end
+
 @implementation Food
 
 - (id)init
@@ -24,15 +28,15 @@
     return self;
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+- (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    return [self initWithName:[dictionary objectForKey:@"name"]];
+    [aCoder encodeObject:self.name forKey:@"name"];
 }
 
-- (NSDictionary *)dictionaryValue
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:_name, @"name", nil];
-    return dict;
+    NSString *name = [aDecoder decodeObjectForKey:@"name"];
+    return [self initWithName:name];
 }
 
 @end

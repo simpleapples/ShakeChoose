@@ -7,14 +7,19 @@
 //
 
 #import "MainViewController.h"
-#import "ListViewController.h"
 #import "AppDelegate.h"
 #import "GlobalService.h"
 #import "Food.h"
+#import "FoodHistory.h"
+#import "ListViewController.h"
+#import "HistoryViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface MainViewController ()
-
+@property (weak, nonatomic) IBOutlet UIButton *confirmButton;
+@property (weak, nonatomic) IBOutlet UILabel *todayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mainLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @end
 
 @implementation MainViewController
@@ -30,6 +35,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.confirmButton.layer.cornerRadius = 6.0f;
+    self.confirmButton.layer.borderColor = [[UIColor whiteColor] CGColor];
+    self.confirmButton.layer.borderWidth = 1.0f;
     [self updateViewWithInit:YES];
 }
 
@@ -54,6 +62,7 @@
         if (food) {
             self.mainLabel.text = food.name;
             self.todayLabel.hidden = NO;
+            self.confirmButton.hidden = NO;
             self.detailLabel.hidden = YES;
             return;
         } else {
@@ -63,6 +72,7 @@
     }
     self.mainLabel.text = @"摇一摇";
     self.todayLabel.hidden = YES;
+    self.confirmButton.hidden = YES;
     self.detailLabel.hidden = NO;
 }
 
@@ -70,6 +80,19 @@
 {
     ListViewController *listViewController = [[ListViewController alloc] init];
     [[AppDelegate delegate].navigationController presentViewController:listViewController animated:YES completion:nil];
+}
+
+- (IBAction)onClickHistory:(id)sender
+{
+    HistoryViewController *historyViewController = [[HistoryViewController alloc] init];
+    [[AppDelegate delegate].navigationController presentViewController:historyViewController animated:YES completion:nil];
+}
+
+- (IBAction)onClickConfirm:(id)sender
+{
+    FoodHistory *foodHistory = [[FoodHistory alloc] initWithName:self.mainLabel.text createTime:[NSDate date]];
+    [[GlobalService sharedSingleton] inserFoodHistory:foodHistory];
+    self.confirmButton.hidden = YES;
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event

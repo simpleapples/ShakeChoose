@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *todayLabel;
-@property (weak, nonatomic) IBOutlet UILabel *mainLabel;
-@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
 - (IBAction)onClickMenu:(id)sender;
 

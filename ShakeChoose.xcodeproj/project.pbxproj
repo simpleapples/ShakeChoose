@@ -23,6 +23,9 @@
 		5A2CED3019AB452C00BB1D1B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2CED2E19AB452C00BB1D1B /* MainViewController.xib */; };
 		5A2CED3419AB486D00BB1D1B /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CED3319AB486D00BB1D1B /* Food.m */; };
 		5A2CED3819AB488D00BB1D1B /* GlobalService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CED3719AB488D00BB1D1B /* GlobalService.m */; };
+		5A3296EF19C19BD800AD1A6E /* FoodHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3296EE19C19BD800AD1A6E /* FoodHistory.m */; };
+		5A3296F319C19D5100AD1A6E /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3296F119C19D5100AD1A6E /* HistoryViewController.m */; };
+		5A3296F419C19D5100AD1A6E /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3296F219C19D5100AD1A6E /* HistoryViewController.xib */; };
 		5AEC8C4E19AC2286008B1B75 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC8C4C19AC2286008B1B75 /* ListViewController.m */; };
 		5AEC8C4F19AC2286008B1B75 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AEC8C4D19AC2286008B1B75 /* ListViewController.xib */; };
 		5AEC8C9719AC2E5E008B1B75 /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC8C9619AC2E5E008B1B75 /* FileUtils.m */; };
@@ -63,6 +66,11 @@
 		5A2CED3319AB486D00BB1D1B /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
 		5A2CED3619AB488D00BB1D1B /* GlobalService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalService.h; sourceTree = "<group>"; };
 		5A2CED3719AB488D00BB1D1B /* GlobalService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalService.m; sourceTree = "<group>"; };
+		5A3296ED19C19BD800AD1A6E /* FoodHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodHistory.h; sourceTree = "<group>"; };
+		5A3296EE19C19BD800AD1A6E /* FoodHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodHistory.m; sourceTree = "<group>"; };
+		5A3296F019C19D5100AD1A6E /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		5A3296F119C19D5100AD1A6E /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		5A3296F219C19D5100AD1A6E /* HistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
 		5AEC8C4B19AC2286008B1B75 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		5AEC8C4C19AC2286008B1B75 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		5AEC8C4D19AC2286008B1B75 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
@@ -180,6 +188,9 @@
 				5AEC8C4B19AC2286008B1B75 /* ListViewController.h */,
 				5AEC8C4C19AC2286008B1B75 /* ListViewController.m */,
 				5AEC8C4D19AC2286008B1B75 /* ListViewController.xib */,
+				5A3296F019C19D5100AD1A6E /* HistoryViewController.h */,
+				5A3296F119C19D5100AD1A6E /* HistoryViewController.m */,
+				5A3296F219C19D5100AD1A6E /* HistoryViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -189,6 +200,8 @@
 			children = (
 				5A2CED3219AB486D00BB1D1B /* Food.h */,
 				5A2CED3319AB486D00BB1D1B /* Food.m */,
+				5A3296ED19C19BD800AD1A6E /* FoodHistory.h */,
+				5A3296EE19C19BD800AD1A6E /* FoodHistory.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -289,6 +302,7 @@
 				5A2CED0219AB428E00BB1D1B /* InfoPlist.strings in Resources */,
 				5A2CED3019AB452C00BB1D1B /* MainViewController.xib in Resources */,
 				5AEC8C4F19AC2286008B1B75 /* ListViewController.xib in Resources */,
+				5A3296F419C19D5100AD1A6E /* HistoryViewController.xib in Resources */,
 				5A2CED0A19AB428E00BB1D1B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,8 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2CED0819AB428E00BB1D1B /* AppDelegate.m in Sources */,
+				5A3296EF19C19BD800AD1A6E /* FoodHistory.m in Sources */,
 				5A2CED3419AB486D00BB1D1B /* Food.m in Sources */,
 				5AEC8C9719AC2E5E008B1B75 /* FileUtils.m in Sources */,
+				5A3296F319C19D5100AD1A6E /* HistoryViewController.m in Sources */,
 				5AEC8C4E19AC2286008B1B75 /* ListViewController.m in Sources */,
 				5A2CED2F19AB452C00BB1D1B /* MainViewController.m in Sources */,
 				5A2CED3819AB488D00BB1D1B /* GlobalService.m in Sources */,

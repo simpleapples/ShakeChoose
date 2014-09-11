@@ -9,9 +9,11 @@
 #import "ListViewController.h"
 #import "Food.h"
 #import "GlobalService.h"
+#import "AppDelegate.h"
 
-@interface ListViewController ()
-
+@interface ListViewController ()<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @end
 
 @implementation ListViewController
@@ -48,18 +50,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [GlobalService sharedSingleton].foodListCount;
+    return [GlobalService sharedSingleton].foodList.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    return 55;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"food"];
-    Food *food = [[GlobalService sharedSingleton] foodAtIndex:indexPath.row];
+    Food *food = [[GlobalService sharedSingleton].foodList objectAtIndex:indexPath.row];
     cell.textLabel.text = food.name;
     return cell;
 }
@@ -87,7 +89,7 @@
 
 - (IBAction)onClickDone:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [[AppDelegate delegate].navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)onClickAdd:(id)sender
