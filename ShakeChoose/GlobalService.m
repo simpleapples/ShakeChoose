@@ -41,9 +41,9 @@ static NSString *const FOOD_HISTORY_FILE = @"FoodHistoryFile";
                       [UIColor colorWithRed:250 / 255.0f green:157 / 255.0f blue:28 / 255.0f alpha:1.0f],
                       [UIColor colorWithRed:76 / 255.0f green:182 / 255.0f blue:178 / 255.0f alpha:1.0f],
                       [UIColor colorWithRed:111 / 255.0f green:176 / 255.0f blue:127 / 255.0f alpha:1.0f],
-                      [UIColor colorWithRed:237 / 255.0f green:85 / 255.0f blue:64 / 255.0f alpha:1.0f],
+                      [UIColor colorWithRed:219 / 255.0f green:99 / 255.0f blue:79 / 255.0f alpha:1.0f],
                       nil];
-        self.currentColor = [UIColor colorWithRed:237 / 255.0f green:85 / 255.0f blue:64 / 255.0f alpha:1.0f];
+        self.currentColor = [UIColor colorWithRed:219 / 255.0f green:99 / 255.0f blue:79 / 255.0f alpha:1.0f];
         self.foodList = [[NSMutableArray alloc] init];
         self.foodHistoryList = [[NSMutableArray alloc] init];
     }
