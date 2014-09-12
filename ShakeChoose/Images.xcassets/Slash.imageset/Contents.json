@@ -2,18 +2,17 @@
   "images" : [
     {
       "idiom" : "iphone",
-      "size" : "29x29",
-      "scale" : "2x"
+      "scale" : "1x"
     },
     {
       "idiom" : "iphone",
-      "size" : "40x40",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "Slash.png"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "AppIcon120.png",
+      "filename" : "Slash@2x.png",
+      "subtype" : "retina4",
       "scale" : "2x"
     }
   ],
