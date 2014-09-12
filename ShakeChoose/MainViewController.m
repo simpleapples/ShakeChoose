@@ -38,7 +38,7 @@
     self.confirmButton.layer.cornerRadius = 6.0f;
     self.confirmButton.layer.borderColor = [[UIColor whiteColor] CGColor];
     self.confirmButton.layer.borderWidth = 1.0f;
-    [self updateViewWithInit:YES];
+    self.confirmButton.hidden = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated

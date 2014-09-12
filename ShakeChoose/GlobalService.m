@@ -41,9 +41,9 @@ static NSString *const FOOD_HISTORY_FILE = @"FoodHistoryFile";
                       [UIColor colorWithRed:250 / 255.0f green:157 / 255.0f blue:28 / 255.0f alpha:1.0f],
                       [UIColor colorWithRed:76 / 255.0f green:182 / 255.0f blue:178 / 255.0f alpha:1.0f],
                       [UIColor colorWithRed:111 / 255.0f green:176 / 255.0f blue:127 / 255.0f alpha:1.0f],
-                      [UIColor colorWithRed:238 / 255.0f green:90 / 255.0f blue:57 / 255.0f alpha:1.0f],
-                      [UIColor colorWithRed:64 / 255.0f green:46 / 255.0f blue:35 / 255.0f alpha:1.0f],
+                      [UIColor colorWithRed:237 / 255.0f green:85 / 255.0f blue:64 / 255.0f alpha:1.0f],
                       nil];
+        self.currentColor = [UIColor colorWithRed:237 / 255.0f green:85 / 255.0f blue:64 / 255.0f alpha:1.0f];
         self.foodList = [[NSMutableArray alloc] init];
         self.foodHistoryList = [[NSMutableArray alloc] init];
     }
@@ -88,8 +88,11 @@ static NSString *const FOOD_HISTORY_FILE = @"FoodHistoryFile";
 
 - (Food *)getRandomFood
 {
-    NSInteger index = arc4random() % self.foodList.count;
-    return [self.foodList objectAtIndex:index];
+    if (self.foodList.count) {
+        NSInteger index = arc4random() % self.foodList.count;
+        return [self.foodList objectAtIndex:index];
+    }
+    return nil;
 }
 
 - (UIColor *)getRandomColor

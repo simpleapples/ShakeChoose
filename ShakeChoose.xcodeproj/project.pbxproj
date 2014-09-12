@@ -56,7 +56,7 @@
 		5A2CED0919AB428E00BB1D1B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5A2CED0F19AB428E00BB1D1B /* ShakeChooseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakeChooseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2CED1019AB428E00BB1D1B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		5A2CED1819AB428E00BB1D1B /* ShakeChooseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShakeChooseTests-Info.plist"; sourceTree = "<group>"; };
+		5A2CED1819AB428E00BB1D1B /* shakechoose.temp_caseinsensitive_renameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "shakechoose.temp_caseinsensitive_renameTests-Info.plist"; sourceTree = "<group>"; };
 		5A2CED1A19AB428E00BB1D1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5A2CED1C19AB428E00BB1D1B /* ShakeChooseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeChooseTests.m; sourceTree = "<group>"; };
 		5A2CED2C19AB452C00BB1D1B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -138,14 +138,14 @@
 		5A2CECFD19AB428E00BB1D1B /* ShakeChoose */ = {
 			isa = PBXGroup;
 			children = (
-				5AEC8C9419AC2E48008B1B75 /* Utils */,
-				5A2CED3519AB487A00BB1D1B /* Service */,
-				5A2CED3119AB484F00BB1D1B /* Model */,
-				5A2CED2B19AB42DC00BB1D1B /* Controller */,
 				5A2CED0619AB428E00BB1D1B /* AppDelegate.h */,
 				5A2CED0719AB428E00BB1D1B /* AppDelegate.m */,
+				5A2CED2B19AB42DC00BB1D1B /* Controller */,
 				5A2CED0919AB428E00BB1D1B /* Images.xcassets */,
+				5A2CED3119AB484F00BB1D1B /* Model */,
+				5A2CED3519AB487A00BB1D1B /* Service */,
 				5A2CECFE19AB428E00BB1D1B /* Supporting Files */,
+				5AEC8C9419AC2E48008B1B75 /* Utils */,
 			);
 			path = ShakeChoose;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 		5A2CED1719AB428E00BB1D1B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5A2CED1819AB428E00BB1D1B /* ShakeChooseTests-Info.plist */,
+				5A2CED1819AB428E00BB1D1B /* shakechoose.temp_caseinsensitive_renameTests-Info.plist */,
 				5A2CED1919AB428E00BB1D1B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -271,6 +271,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Duobei Brothers";
 				TargetAttributes = {
+					5A2CECF319AB428E00BB1D1B = {
+						DevelopmentTeam = QJP4AWWJDU;
+					};
 					5A2CED0E19AB428E00BB1D1B = {
 						TestTargetID = 5A2CECF319AB428E00BB1D1B;
 					};
@@ -447,10 +450,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShakeChoose/ShakeChoose-Prefix.pch";
 				INFOPLIST_FILE = "ShakeChoose/ShakeChoose-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ShakeChoose;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -460,10 +464,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShakeChoose/ShakeChoose-Prefix.pch";
 				INFOPLIST_FILE = "ShakeChoose/ShakeChoose-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ShakeChoose;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -483,8 +488,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "ShakeChooseTests/ShakeChooseTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ShakeChooseTests/shakechoose.temp_caseinsensitive_renameTests-Info.plist";
+				PRODUCT_NAME = ShakeChooseTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -501,8 +506,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShakeChoose/ShakeChoose-Prefix.pch";
-				INFOPLIST_FILE = "ShakeChooseTests/ShakeChooseTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ShakeChooseTests/shakechoose.temp_caseinsensitive_renameTests-Info.plist";
+				PRODUCT_NAME = ShakeChooseTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
