@@ -272,7 +272,7 @@
 				ORGANIZATIONNAME = "Duobei Brothers";
 				TargetAttributes = {
 					5A2CECF319AB428E00BB1D1B = {
-						DevelopmentTeam = QJP4AWWJDU;
+						DevelopmentTeam = LMJACF6T63;
 					};
 					5A2CED0E19AB428E00BB1D1B = {
 						TestTargetID = 5A2CECF319AB428E00BB1D1B;

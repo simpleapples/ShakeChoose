@@ -39,6 +39,7 @@
     self.confirmButton.layer.borderColor = [[UIColor whiteColor] CGColor];
     self.confirmButton.layer.borderWidth = 1.0f;
     self.confirmButton.hidden = YES;
+    self.todayLabel.hidden = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated
