@@ -14,12 +14,14 @@
 #import "ListViewController.h"
 #import "HistoryViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "GoogleMobileAdsSdkiOS/GADBannerView.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 @property (weak, nonatomic) IBOutlet UILabel *todayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mainLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (strong, nonatomic) GADBannerView *adBannerView;
 @end
 
 @implementation MainViewController
@@ -40,6 +42,12 @@
     self.confirmButton.layer.borderWidth = 1.0f;
     self.confirmButton.hidden = YES;
     self.todayLabel.hidden = YES;
+    
+    self.adBannerView = [[GADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
+    self.adBannerView.adUnitID = @"ca-app-pub-2517651978200721/2931818096";
+    self.adBannerView.rootViewController = self;
+    [self.view addSubview:self.adBannerView];
+    [self.adBannerView loadRequest:[GADRequest request]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

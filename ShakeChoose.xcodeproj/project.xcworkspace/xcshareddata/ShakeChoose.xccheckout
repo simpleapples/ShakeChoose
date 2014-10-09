@@ -10,29 +10,29 @@
 	<string>ShakeChoose</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0566AF10-E983-4272-AB78-EDDB9B88A233</key>
+		<key>3A92455D07FBFEE20099B061AE35A1B9086CC36D</key>
 		<string>ssh://github.com/simpleapples/ShakeChoose.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ShakeChoose.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0566AF10-E983-4272-AB78-EDDB9B88A233</key>
+		<key>3A92455D07FBFEE20099B061AE35A1B9086CC36D</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/simpleapples/ShakeChoose.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0566AF10-E983-4272-AB78-EDDB9B88A233</string>
+	<string>3A92455D07FBFEE20099B061AE35A1B9086CC36D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0566AF10-E983-4272-AB78-EDDB9B88A233</string>
+			<string>3A92455D07FBFEE20099B061AE35A1B9086CC36D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ShakeChoose</string>
 		</dict>
