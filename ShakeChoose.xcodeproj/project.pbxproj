@@ -28,6 +28,7 @@
 		5AAFC8DB19E78177009F79BC /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAFC8DD19E78177009F79BC /* HistoryViewController.xib */; };
 		5AAFC8E319E7825C009F79BC /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAFC8E519E7825C009F79BC /* ListViewController.xib */; };
 		5AAFC8E619E7825F009F79BC /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAFC8E819E7825F009F79BC /* MainViewController.xib */; };
+		5AAFC8E919E78314009F79BC /* ShakeChoose-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AAFC8E219E7824E009F79BC /* ShakeChoose-Info.plist */; };
 		5AEC8C4E19AC2286008B1B75 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC8C4C19AC2286008B1B75 /* ListViewController.m */; };
 		5AEC8C9719AC2E5E008B1B75 /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC8C9619AC2E5E008B1B75 /* FileUtils.m */; };
 		5AEC8C9919AC3510008B1B75 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEC8C9819AC3510008B1B75 /* AudioToolbox.framework */; };
@@ -381,7 +382,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Duobei Brothers";
+				ORGANIZATIONNAME = "Chihya Tsang";
 				TargetAttributes = {
 					5A2CECF319AB428E00BB1D1B = {
 						DevelopmentTeam = LMJACF6T63;
@@ -414,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AAFC8E919E78314009F79BC /* ShakeChoose-Info.plist in Resources */,
 				5A2CED0219AB428E00BB1D1B /* InfoPlist.strings in Resources */,
 				5AAFC8E619E7825F009F79BC /* MainViewController.xib in Resources */,
 				5AAFC8E319E7825C009F79BC /* ListViewController.xib in Resources */,
@@ -597,7 +599,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShakeChoose/ShakeChoose-Prefix.pch";
-				INFOPLIST_FILE = "ShakeChoose/ShakeChoose-Info.plist";
+				INFOPLIST_FILE = "ShakeChoose/zh-Hans.lproj/ShakeChoose-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -618,7 +620,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShakeChoose/ShakeChoose-Prefix.pch";
-				INFOPLIST_FILE = "ShakeChoose/ShakeChoose-Info.plist";
+				INFOPLIST_FILE = "ShakeChoose/zh-Hans.lproj/ShakeChoose-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
