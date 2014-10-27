@@ -16,7 +16,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "GoogleMobileAdsSdkiOS/GADBannerView.h"
 
-@interface MainViewController ()
+@interface MainViewController () <GADBannerViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 @property (weak, nonatomic) IBOutlet UILabel *todayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mainLabel;
@@ -46,6 +46,7 @@
     self.adBannerView = [[GADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
     self.adBannerView.adUnitID = @"ca-app-pub-2517651978200721/2931818096";
     self.adBannerView.rootViewController = self;
+    self.adBannerView.delegate = self;
     [self.view addSubview:self.adBannerView];
     [self.adBannerView loadRequest:[GADRequest request]];
 }
