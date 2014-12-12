@@ -25,12 +25,13 @@ static NSString *const FOOD_HISTORY_FILE = @"FoodHistoryFile";
 + (GlobalService *)sharedSingleton
 {
     static GlobalService *sharedSingleton;
-    @synchronized(self) {
+    static dispatch_once_t onceToken = 0;
+    dispatch_once(&onceToken, ^{
         if (!sharedSingleton) {
             sharedSingleton = [[GlobalService alloc] init];
         }
-        return sharedSingleton;
-    }
+    });
+    return sharedSingleton;
 }
 
 - (instancetype)init
