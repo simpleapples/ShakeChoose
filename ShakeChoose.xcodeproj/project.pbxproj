@@ -35,6 +35,8 @@
 		5AF281B01A41608F004F62BD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5AF2818B1A41608F004F62BD /* .gitignore */; };
 		5AF281B11A41608F004F62BD /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2818D1A41608F004F62BD /* Appirater.m */; };
 		5AF281B21A41608F004F62BD /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AF2818F1A41608F004F62BD /* AppiraterLocalizable.strings */; };
+		5AF281B41A4163E9004F62BD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF281B31A4163E9004F62BD /* CFNetwork.framework */; };
+		5AF281B61A41640D004F62BD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF281B51A41640D004F62BD /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +151,8 @@
 		5AF281AD1A41608F004F62BD /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/AppiraterLocalizable.strings; sourceTree = "<group>"; };
 		5AF281AE1A41608F004F62BD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AppiraterLocalizable.strings"; sourceTree = "<group>"; };
 		5AF281AF1A41608F004F62BD /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/AppiraterLocalizable.strings"; sourceTree = "<group>"; };
+		5AF281B31A4163E9004F62BD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5AF281B51A41640D004F62BD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF281B61A41640D004F62BD /* StoreKit.framework in Frameworks */,
+				5AF281B41A4163E9004F62BD /* CFNetwork.framework in Frameworks */,
 				5AA4C84A19E6826500401565 /* libGoogleAdMobAds.a in Frameworks */,
 				5AEC8C9919AC3510008B1B75 /* AudioToolbox.framework in Frameworks */,
 				5A2CECFA19AB428E00BB1D1B /* CoreGraphics.framework in Frameworks */,
@@ -199,6 +205,8 @@
 		5A2CECF619AB428E00BB1D1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AF281B51A41640D004F62BD /* StoreKit.framework */,
+				5AF281B31A4163E9004F62BD /* CFNetwork.framework */,
 				5AA4C92019E6857900401565 /* libz.dylib */,
 				5AA4C91E19E6857000401565 /* SystemConfiguration.framework */,
 				5AA4C91C19E6856000401565 /* CoreData.framework */,
@@ -214,11 +222,11 @@
 		5A2CECFD19AB428E00BB1D1B /* ShakeChoose */ = {
 			isa = PBXGroup;
 			children = (
-				5AA4C82819E6825D00401565 /* Libs */,
+				5A2CED0919AB428E00BB1D1B /* Images.xcassets */,
 				5A2CED0619AB428E00BB1D1B /* AppDelegate.h */,
 				5A2CED0719AB428E00BB1D1B /* AppDelegate.m */,
+				5AA4C82819E6825D00401565 /* Libs */,
 				5A2CED2B19AB42DC00BB1D1B /* Controller */,
-				5A2CED0919AB428E00BB1D1B /* Images.xcassets */,
 				5A2CED3119AB484F00BB1D1B /* Model */,
 				5A2CED3519AB487A00BB1D1B /* Service */,
 				5A2CECFE19AB428E00BB1D1B /* Supporting Files */,
