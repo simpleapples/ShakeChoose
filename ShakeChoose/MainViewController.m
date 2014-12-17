@@ -17,11 +17,13 @@
 #import "GoogleMobileAdsSdkiOS/GADBannerView.h"
 
 @interface MainViewController () <GADBannerViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 @property (weak, nonatomic) IBOutlet UILabel *todayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mainLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @property (strong, nonatomic) GADBannerView *adBannerView;
+
 @end
 
 @implementation MainViewController

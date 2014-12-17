@@ -11,9 +11,12 @@
 #import "ListViewController.h"
 #import "HistoryViewController.h"
 #import "GlobalService.h"
+#import "Appirater.h"
 
 @interface AppDelegate ()
+
 @property (strong, nonatomic) UINavigationController *navigationController;
+
 @end
 
 @implementation AppDelegate
@@ -23,16 +26,24 @@
     application.statusBarHidden = NO;
     application.statusBarStyle = UIStatusBarStyleLightContent;
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     self.navigationController = [[UINavigationController alloc] init];
-    [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
     [[GlobalService sharedSingleton] recoverFromFile];
     
     [self enterMainViewControllerAnimated:NO];
+    
+    [Appirater setAppId:@"918416820"];
+    [Appirater setDaysUntilPrompt:2];
+    [Appirater setUsesUntilPrompt:2];
+    [Appirater setSignificantEventsUntilPrompt:-1];
+    [Appirater setTimeBeforeReminding:1];
+    [Appirater setDebug:NO];
+    [Appirater appLaunched:YES];
     
     return YES;
 }

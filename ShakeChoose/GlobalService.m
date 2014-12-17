@@ -14,10 +14,12 @@ static NSString *const FOOD_FILE = @"FoodFile";
 static NSString *const FOOD_HISTORY_FILE = @"FoodHistoryFile";
 
 @interface GlobalService ()
+
 @property (strong, nonatomic, readwrite) NSArray *colorList;
 @property (strong, nonatomic, readwrite) NSMutableArray *foodList;
 @property (strong, nonatomic, readwrite) NSMutableArray *foodHistoryList;
 @property (strong, nonatomic, readwrite) UIColor *currentColor;
+
 @end
 
 @implementation GlobalService

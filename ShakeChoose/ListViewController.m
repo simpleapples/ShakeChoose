@@ -12,8 +12,10 @@
 #import "AppDelegate.h"
 
 @interface ListViewController ()<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
+
 @end
 
 @implementation ListViewController
@@ -21,8 +23,6 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
     return self;
 }
 
