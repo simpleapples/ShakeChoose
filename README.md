@@ -1,7 +1,7 @@
 ShakeChoose
 ===========
 
-帮你选择今天吃什么
+摇摇选餐 - 帮你选择今天吃什么
 
 <a href="https://itunes.apple.com/cn/app/%E6%91%87%E6%91%87%E9%80%89%E9%A4%90-%E9%80%89%E6%8B%A9%E5%9B%B0%E9%9A%BE%E8%80%85%E5%BF%85%E5%A4%87/id918416820?mt=8" target="_blank"><img src="https://linkmaker.itunes.apple.com/assets/shared/badges/zh-cht/appstore-lrg.svg" /></a>
 
